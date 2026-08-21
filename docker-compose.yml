@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: hp_diary_mongodb
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: harry_potter_diary
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - hp_diary_network
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: hp_diary_backend
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - DATABASE_URL=mongodb://mongodb:27017/harry_potter_diary
+      - JWT_SECRET=lumos_magical_secret_key_2026_change_in_prod
+      - JWT_REFRESH_SECRET=alohomora_refresh_secret_key_2026
+      - NODE_ENV=production
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    networks:
+      - hp_diary_network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: hp_diary_frontend
+    restart: always
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+    networks:
+      - hp_diary_network
+
+volumes:
+  mongodb_data:
+
+networks:
+  hp_diary_network:
+    driver: bridge

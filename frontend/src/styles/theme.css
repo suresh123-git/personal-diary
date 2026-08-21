@@ -1,0 +1,64 @@
+:root {
+  /* Default Base Theme - Midnight Navy & Antique Gold */
+  --color-background: #090C15;
+  --color-surface: #121829;
+  --color-parchment-50: #FFFDF5;
+  --color-parchment-100: #F7F1E1;
+  --color-parchment-200: #EADCB9;
+  --color-parchment-300: #D8C390;
+  --color-parchment-700: #8C733E;
+  --color-parchment-900: #423418;
+  
+  --color-gold-400: #F3C649;
+  --color-gold-500: #D3A625;
+  --color-gold-600: #9E7912;
+  
+  --color-house-primary: #D3A625;
+  --color-house-secondary: #740001;
+  --color-house-accent: #EEBA30;
+  --color-house-base: #090C15;
+}
+
+/* 🦁 Gryffindor Theme */
+.theme-gryffindor {
+  --color-background: #0D0304;
+  --color-surface: #1E0709;
+  --color-house-primary: #D3A625;
+  --color-house-secondary: #740001;
+  --color-house-accent: #EEBA30;
+  --color-house-base: #1C0305;
+  --color-gold-500: #D3A625;
+}
+
+/* 🐍 Slytherin Theme */
+.theme-slytherin {
+  --color-background: #05100B;
+  --color-surface: #0B1F16;
+  --color-house-primary: #2A623D;
+  --color-house-secondary: #AAAAAA;
+  --color-house-accent: #5D5D5D;
+  --color-house-base: #05100B;
+  --color-gold-500: #3E8B56;
+}
+
+/* 🦅 Ravenclaw Theme */
+.theme-ravenclaw {
+  --color-background: #050B1A;
+  --color-surface: #0B1836;
+  --color-house-primary: #0E1A40;
+  --color-house-secondary: #946B2D;
+  --color-house-accent: #222F5B;
+  --color-house-base: #050B1A;
+  --color-gold-500: #B58A3B;
+}
+
+/* 🦡 Hufflepuff Theme */
+.theme-hufflepuff {
+  --color-background: #14100B;
+  --color-surface: #241D15;
+  --color-house-primary: #ECB939;
+  --color-house-secondary: #372E29;
+  --color-house-accent: #726255;
+  --color-house-base: #14100B;
+  --color-gold-500: #ECB939;
+}

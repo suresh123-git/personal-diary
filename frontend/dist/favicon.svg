@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Midnight Navy Outer Shield -->
+  <rect x="5" y="5" width="90" height="90" rx="22" fill="#090C15" stroke="#D3A625" stroke-width="4"/>
+  
+  <!-- Outer Glow Ring -->
+  <circle cx="50" cy="50" r="40" fill="none" stroke="#740001" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Harry Potter Iconic Lightning Scar -->
+  <path d="M 55 15 L 43 36 L 52 36 L 39 60 L 49 39 L 42 39 Z" fill="#F3C649" stroke="#EEBA30" stroke-width="1.5"/>
+
+  <!-- Harry Potter Round Spectacles -->
+  <circle cx="33" cy="58" r="15" fill="none" stroke="#F3C649" stroke-width="3.5"/>
+  <circle cx="67" cy="58" r="15" fill="none" stroke="#F3C649" stroke-width="3.5"/>
+  <path d="M 48 57 C 50 54, 50 54, 52 57" stroke="#F3C649" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+</svg>
