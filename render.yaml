@@ -26,7 +26,6 @@ services:
   - type: web
     name: hp-diary-frontend
     env: static
-    plan: free
     rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: ./dist
