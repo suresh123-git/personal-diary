@@ -20,9 +20,8 @@
     "noUnusedParameters": false,
     "noImplicitReturns": true,
 
-    "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["./src/*"]
     }
   },
   "include": ["src"],
