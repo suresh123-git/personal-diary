@@ -22,11 +22,10 @@ services:
       - key: CORS_ORIGIN
         sync: false
 
-  # React Frontend Static Site
+  # React Frontend Static Site (Served globally via Render CDN)
   - type: web
     name: hp-diary-frontend
     env: static
-    region: singapore
     plan: free
     rootDir: frontend
     buildCommand: npm install && npm run build
