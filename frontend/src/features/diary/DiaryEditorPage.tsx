@@ -30,7 +30,7 @@ export const DiaryEditorPage: React.FC = () => {
   const [entryId, setEntryId] = useState<string | null>(isNew ? null : id);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
-  const autosaveTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const autosaveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Load existing entry if editing
   useEffect(() => {
